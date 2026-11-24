@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://ckt8i0dx43ex0"]
+[gd_scene load_steps=8 format=3 uid="uid://ckt8i0dx43ex0"]
 
+[ext_resource type="Script" path="res://Scripts/BenchmarkRoute.gd" id="4_bench"]
 [ext_resource type="Script" uid="uid://dafu5s07q3jcp" path="res://Scripts/UIController.gd" id="1_24736"]
 [ext_resource type="Resource" uid="uid://cn0mwoakbtfhb" path="res://Resources/ScalabilitySettings.tres" id="2_5o1hx"]
 [ext_resource type="StyleBox" uid="uid://dwtrhw44g5vck" path="res://Materials/separator_horizontal.tres" id="2_j6um5"]
@@ -127,6 +128,11 @@ popup/item_2/id = 2
 layout_mode = 2
 theme_override_styles/separator = ExtResource("2_j6um5")
 
+[node name="bench_button" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Run Benchmark"
+
 [node name="Button" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
@@ -139,6 +145,32 @@ theme_override_styles/separator = ExtResource("3_8dy65")
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
 alignment = 2
+
+[node name="bench_panel" type="VBoxContainer" parent="HBoxContainer/VBoxContainer2"]
+visible = false
+layout_mode = 2
+
+[node name="bench_label" type="Label" parent="HBoxContainer/VBoxContainer2/bench_panel"]
+layout_mode = 2
+text = "Benchmark"
+
+[node name="bench_buttons" type="HBoxContainer" parent="HBoxContainer/VBoxContainer2/bench_panel"]
+layout_mode = 2
+
+[node name="bench_copy" type="Button" parent="HBoxContainer/VBoxContainer2/bench_panel/bench_buttons"]
+layout_mode = 2
+focus_mode = 0
+text = "Copy"
+
+[node name="bench_close" type="Button" parent="HBoxContainer/VBoxContainer2/bench_panel/bench_buttons"]
+layout_mode = 2
+focus_mode = 0
+text = "Close"
+
+[node name="bench_separator" type="HSeparator" parent="HBoxContainer/VBoxContainer2"]
+visible = false
+layout_mode = 2
+theme_override_styles/separator = ExtResource("2_j6um5")
 
 [node name="profiler" type="Label" parent="HBoxContainer/VBoxContainer2"]
 layout_mode = 2
@@ -159,7 +191,17 @@ theme_override_styles/separator = ExtResource("2_j6um5")
 
 [node name="hint_label" type="Label" parent="HBoxContainer/VBoxContainer2"]
 layout_mode = 2
-text = "To capture/uncapture cursor, press ESC"
+text = "To capture/uncapture cursor, press ESC
+Benchmark: B to run/stop"
+
+[node name="Benchmark" type="Node" parent="." node_paths=PackedStringArray("run_button", "result_panel", "result_label", "copy_button", "close_button", "result_separator")]
+script = ExtResource("4_bench")
+run_button = NodePath("../HBoxContainer/VBoxContainer/bench_button")
+result_panel = NodePath("../HBoxContainer/VBoxContainer2/bench_panel")
+result_label = NodePath("../HBoxContainer/VBoxContainer2/bench_panel/bench_label")
+copy_button = NodePath("../HBoxContainer/VBoxContainer2/bench_panel/bench_buttons/bench_copy")
+close_button = NodePath("../HBoxContainer/VBoxContainer2/bench_panel/bench_buttons/bench_close")
+result_separator = NodePath("../HBoxContainer/VBoxContainer2/bench_separator")
 
 [connection signal="item_selected" from="HBoxContainer/VBoxContainer/time_of_day_select" to="." method="_on_time_selected"]
 [connection signal="item_selected" from="HBoxContainer/VBoxContainer/resolution_select" to="." method="_on_res_selected"]
