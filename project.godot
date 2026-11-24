@@ -8,15 +8,19 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Bistro-Demo-Tweaked"
 config/description="Lumberyard Bistro demo for Godot"
 config/version="1.0"
 run/main_scene="res://MainScene.tscn"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 1)
-boot_splash/fullsize=false
+boot_splash/stretch_mode=0
 boot_splash/image="res://Textures/bistro_godot_loading.png"
 config/icon="res://Textures/bistro_godot.png"
 
@@ -55,8 +59,8 @@ anti_aliasing/screen_space_roughness_limiter/enabled=false
 scaling_3d/mode=2
 textures/decals/filter=5
 textures/light_projectors/filter=5
-environment/screen_space_reflection/roughness_quality=2
 environment/subsurface_scattering/subsurface_scattering_quality=2
 global_illumination/sdfgi/probe_ray_count=2
 anti_aliasing/quality/use_taa=true
 lights_and_shadows/positional_shadow/atlas_size=2048
+environment/screen_space_reflection/roughness_quality=2
