@@ -15,9 +15,13 @@ dest_files=["res://.godot/imported/S5B2_Props.glb-00317299a92dce1898793638e4c6d7
 
 nodes/root_type=""
 nodes/root_name=""
+nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
@@ -32,6 +36,9 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
 _subresources={
 "materials": {
 "@MATERIAL:0": {
@@ -63,8 +70,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section05/S5B2_Props/S5B2_Props_Mesh_219_001.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section05/S5B2_Props/S5B2_Props_Mesh_219_001.res"
+"save_to_file/path": "uid://dur46eewl8g5b"
 },
 "S5B2_Props_Mesh_219_002": {
 "generate/lightmap_uv": 0,
@@ -73,8 +81,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section05/S5B2_Props/S5B2_Props_Mesh_219_002.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section05/S5B2_Props/S5B2_Props_Mesh_219_002.res"
+"save_to_file/path": "uid://dtvsrbmltf46n"
 },
 "S5B2_Props_Mesh_219_003": {
 "generate/lightmap_uv": 0,
@@ -83,8 +92,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section05/S5B2_Props/S5B2_Props_Mesh_219_003.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section05/S5B2_Props/S5B2_Props_Mesh_219_003.res"
+"save_to_file/path": "uid://dw2ouh6a63t3h"
 },
 "S5B2_Props_Mesh_219_004": {
 "generate/lightmap_uv": 0,
@@ -93,8 +103,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section05/S5B2_Props/S5B2_Props_Mesh_219_004.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section05/S5B2_Props/S5B2_Props_Mesh_219_004.res"
+"save_to_file/path": "uid://cf28lmggauy5"
 },
 "S5B2_Props_Mesh_219_005": {
 "generate/lightmap_uv": 0,
@@ -103,10 +114,12 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section05/S5B2_Props/S5B2_Props_Mesh_219_005.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section05/S5B2_Props/S5B2_Props_Mesh_219_005.res"
+"save_to_file/path": "uid://cnjm10maurbw1"
 }
 }
 }
 gltf/naming_version=0
 gltf/embedded_image_handling=1
+gltf/texture_map_mode=0

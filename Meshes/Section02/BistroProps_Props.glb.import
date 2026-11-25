@@ -15,9 +15,13 @@ dest_files=["res://.godot/imported/BistroProps_Props.glb-b1a4f19e137fc441fb04ba5
 
 nodes/root_type=""
 nodes/root_name=""
+nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
@@ -32,6 +36,9 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
 _subresources={
 "materials": {
 "@MATERIAL:0": {
@@ -419,8 +426,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_1282_006.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_1282_006.res"
+"save_to_file/path": "uid://b66jksbpy6pl8"
 },
 "BistroProps_Props_Mesh_1282_007": {
 "generate/lightmap_uv": 0,
@@ -429,8 +437,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_1282_007.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_1282_007.res"
+"save_to_file/path": "uid://b3cer67vl5fhx"
 },
 "BistroProps_Props_Mesh_248_009": {
 "generate/lightmap_uv": 0,
@@ -439,8 +448,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_248_009.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_248_009.res"
+"save_to_file/path": "uid://8c6jtffnyi10"
 },
 "BistroProps_Props_Mesh_248_010": {
 "generate/lightmap_uv": 0,
@@ -449,8 +459,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_248_010.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_248_010.res"
+"save_to_file/path": "uid://dkvp275mhjida"
 },
 "BistroProps_Props_Mesh_248_011": {
 "generate/lightmap_uv": 0,
@@ -459,8 +470,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_248_011.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_248_011.res"
+"save_to_file/path": "uid://d2wogtmon0uyp"
 },
 "BistroProps_Props_Mesh_249_009": {
 "generate/lightmap_uv": 0,
@@ -469,8 +481,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_249_009.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_249_009.res"
+"save_to_file/path": "uid://c6g8lnx0mvls8"
 },
 "BistroProps_Props_Mesh_249_010": {
 "generate/lightmap_uv": 0,
@@ -479,8 +492,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_249_010.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_249_010.res"
+"save_to_file/path": "uid://v1lsp0v5hg6l"
 },
 "BistroProps_Props_Mesh_249_011": {
 "generate/lightmap_uv": 0,
@@ -489,8 +503,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_249_011.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_249_011.res"
+"save_to_file/path": "uid://dsha6cmqxglfv"
 },
 "BistroProps_Props_Mesh_250_009": {
 "generate/lightmap_uv": 0,
@@ -499,8 +514,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_250_009.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_250_009.res"
+"save_to_file/path": "uid://btpnuvqgfe1fi"
 },
 "BistroProps_Props_Mesh_250_010": {
 "generate/lightmap_uv": 0,
@@ -509,8 +525,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_250_010.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_250_010.res"
+"save_to_file/path": "uid://d2l7mjcs7oj28"
 },
 "BistroProps_Props_Mesh_250_011": {
 "generate/lightmap_uv": 0,
@@ -519,8 +536,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_250_011.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_250_011.res"
+"save_to_file/path": "uid://jiw53fvfwwwp"
 },
 "BistroProps_Props_Mesh_251_009": {
 "generate/lightmap_uv": 0,
@@ -529,8 +547,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_251_009.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_251_009.res"
+"save_to_file/path": "uid://cnda8dadoisxd"
 },
 "BistroProps_Props_Mesh_251_010": {
 "generate/lightmap_uv": 0,
@@ -539,8 +558,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_251_010.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_251_010.res"
+"save_to_file/path": "uid://cl510jcriiw1s"
 },
 "BistroProps_Props_Mesh_251_011": {
 "generate/lightmap_uv": 0,
@@ -549,8 +569,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_251_011.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_251_011.res"
+"save_to_file/path": "uid://ds7dyade0ndn0"
 },
 "BistroProps_Props_Mesh_252_009": {
 "generate/lightmap_uv": 0,
@@ -559,8 +580,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_252_009.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_252_009.res"
+"save_to_file/path": "uid://8ilrm00jm65q"
 },
 "BistroProps_Props_Mesh_252_010": {
 "generate/lightmap_uv": 0,
@@ -569,8 +591,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_252_010.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_252_010.res"
+"save_to_file/path": "uid://bucmh32n1c5l5"
 },
 "BistroProps_Props_Mesh_252_011": {
 "generate/lightmap_uv": 0,
@@ -579,8 +602,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_252_011.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_252_011.res"
+"save_to_file/path": "uid://dxed5v72ndivn"
 },
 "BistroProps_Props_Mesh_253_009": {
 "generate/lightmap_uv": 0,
@@ -589,8 +613,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_253_009.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_253_009.res"
+"save_to_file/path": "uid://ce34n4k3lc5b1"
 },
 "BistroProps_Props_Mesh_253_010": {
 "generate/lightmap_uv": 0,
@@ -599,8 +624,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_253_010.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_253_010.res"
+"save_to_file/path": "uid://7tnkdn834xbf"
 },
 "BistroProps_Props_Mesh_253_011": {
 "generate/lightmap_uv": 0,
@@ -609,8 +635,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_253_011.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_253_011.res"
+"save_to_file/path": "uid://d2vx01m8ihwa6"
 },
 "BistroProps_Props_Mesh_254_009": {
 "generate/lightmap_uv": 0,
@@ -619,8 +646,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_254_009.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_254_009.res"
+"save_to_file/path": "uid://ndrbircoagjs"
 },
 "BistroProps_Props_Mesh_254_010": {
 "generate/lightmap_uv": 0,
@@ -629,8 +657,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_254_010.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_254_010.res"
+"save_to_file/path": "uid://dbfcy4nk7w4xy"
 },
 "BistroProps_Props_Mesh_254_011": {
 "generate/lightmap_uv": 0,
@@ -639,8 +668,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_254_011.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_254_011.res"
+"save_to_file/path": "uid://ced5v6djephj3"
 },
 "BistroProps_Props_Mesh_255_009": {
 "generate/lightmap_uv": 0,
@@ -649,8 +679,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_255_009.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_255_009.res"
+"save_to_file/path": "uid://bhfxb6khochej"
 },
 "BistroProps_Props_Mesh_255_010": {
 "generate/lightmap_uv": 0,
@@ -659,8 +690,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_255_010.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_255_010.res"
+"save_to_file/path": "uid://dgyrhs0yqecwk"
 },
 "BistroProps_Props_Mesh_255_011": {
 "generate/lightmap_uv": 0,
@@ -669,8 +701,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_255_011.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_255_011.res"
+"save_to_file/path": "uid://cqenwpypbaoyw"
 },
 "BistroProps_Props_Mesh_256_009": {
 "generate/lightmap_uv": 0,
@@ -679,8 +712,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_256_009.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_256_009.res"
+"save_to_file/path": "uid://b6lpjlbrjtw0c"
 },
 "BistroProps_Props_Mesh_256_010": {
 "generate/lightmap_uv": 0,
@@ -689,8 +723,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_256_010.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_256_010.res"
+"save_to_file/path": "uid://cyi3mw6r5kc6c"
 },
 "BistroProps_Props_Mesh_256_011": {
 "generate/lightmap_uv": 0,
@@ -699,8 +734,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_256_011.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_256_011.res"
+"save_to_file/path": "uid://bw4i7b4gnrra7"
 },
 "BistroProps_Props_Mesh_257_009": {
 "generate/lightmap_uv": 0,
@@ -709,8 +745,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_257_009.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_257_009.res"
+"save_to_file/path": "uid://8lkvq2x0uv4l"
 },
 "BistroProps_Props_Mesh_257_010": {
 "generate/lightmap_uv": 0,
@@ -719,8 +756,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_257_010.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_257_010.res"
+"save_to_file/path": "uid://ddcuib4dnaoio"
 },
 "BistroProps_Props_Mesh_257_011": {
 "generate/lightmap_uv": 0,
@@ -729,8 +767,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_257_011.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_257_011.res"
+"save_to_file/path": "uid://b8q70v83vol3r"
 },
 "BistroProps_Props_Mesh_258_009": {
 "generate/lightmap_uv": 0,
@@ -739,8 +778,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_258_009.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_258_009.res"
+"save_to_file/path": "uid://dmdofdg08wljc"
 },
 "BistroProps_Props_Mesh_258_010": {
 "generate/lightmap_uv": 0,
@@ -749,8 +789,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_258_010.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_258_010.res"
+"save_to_file/path": "uid://caofckkrdog1q"
 },
 "BistroProps_Props_Mesh_258_011": {
 "generate/lightmap_uv": 0,
@@ -759,8 +800,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_258_011.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_258_011.res"
+"save_to_file/path": "uid://c8cb5jbv2am53"
 },
 "BistroProps_Props_Mesh_646": {
 "generate/lightmap_uv": 0,
@@ -769,8 +811,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_646.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_646.res"
+"save_to_file/path": "uid://bmeug5iwtycvp"
 },
 "BistroProps_Props_Mesh_647": {
 "generate/lightmap_uv": 0,
@@ -779,8 +822,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_647.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_647.res"
+"save_to_file/path": "uid://b53hfnl3aq8e0"
 },
 "BistroProps_Props_Mesh_658": {
 "generate/lightmap_uv": 0,
@@ -789,8 +833,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_658.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_658.res"
+"save_to_file/path": "uid://b2jrhq05l6tau"
 },
 "BistroProps_Props_Mesh_659": {
 "generate/lightmap_uv": 0,
@@ -799,8 +844,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_659.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_659.res"
+"save_to_file/path": "uid://c6gfpl7n13qp0"
 },
 "BistroProps_Props_Mesh_660": {
 "generate/lightmap_uv": 0,
@@ -809,8 +855,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_660.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_660.res"
+"save_to_file/path": "uid://rus1af6ctejo"
 },
 "BistroProps_Props_Mesh_661": {
 "generate/lightmap_uv": 0,
@@ -819,8 +866,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_661.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_661.res"
+"save_to_file/path": "uid://dpcdlb0p3pd6g"
 },
 "BistroProps_Props_Mesh_662": {
 "generate/lightmap_uv": 0,
@@ -829,8 +877,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_662.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_662.res"
+"save_to_file/path": "uid://vwdsq86vd8mk"
 },
 "BistroProps_Props_Mesh_663": {
 "generate/lightmap_uv": 0,
@@ -839,8 +888,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_663.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_663.res"
+"save_to_file/path": "uid://w68uuqyhtfdh"
 },
 "BistroProps_Props_Mesh_664": {
 "generate/lightmap_uv": 0,
@@ -849,8 +899,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_664.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_664.res"
+"save_to_file/path": "uid://05xedgtfo082"
 },
 "BistroProps_Props_Mesh_665": {
 "generate/lightmap_uv": 0,
@@ -859,8 +910,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_665.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_665.res"
+"save_to_file/path": "uid://cayfrayp54ihf"
 },
 "BistroProps_Props_Mesh_666": {
 "generate/lightmap_uv": 0,
@@ -869,8 +921,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_666.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_666.res"
+"save_to_file/path": "uid://cte43sa441g7j"
 },
 "BistroProps_Props_Mesh_667": {
 "generate/lightmap_uv": 0,
@@ -879,8 +932,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_667.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_667.res"
+"save_to_file/path": "uid://clmy0guuvxs84"
 },
 "BistroProps_Props_Mesh_668": {
 "generate/lightmap_uv": 0,
@@ -889,8 +943,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_668.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_668.res"
+"save_to_file/path": "uid://bqfgefgeu5swk"
 },
 "BistroProps_Props_Mesh_669": {
 "generate/lightmap_uv": 0,
@@ -899,8 +954,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_669.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_669.res"
+"save_to_file/path": "uid://dikxegqwdmxtm"
 },
 "BistroProps_Props_Mesh_670": {
 "generate/lightmap_uv": 0,
@@ -909,8 +965,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_670.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_670.res"
+"save_to_file/path": "uid://bnio4khu1tfpb"
 },
 "BistroProps_Props_Mesh_673": {
 "generate/lightmap_uv": 0,
@@ -919,8 +976,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_673.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_673.res"
+"save_to_file/path": "uid://bvsmhyjeymqld"
 },
 "BistroProps_Props_Mesh_674": {
 "generate/lightmap_uv": 0,
@@ -929,8 +987,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_674.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_674.res"
+"save_to_file/path": "uid://drv65abmspso2"
 },
 "BistroProps_Props_Mesh_675": {
 "generate/lightmap_uv": 0,
@@ -939,8 +998,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_675.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_675.res"
+"save_to_file/path": "uid://drpnlkqmsgfe8"
 },
 "BistroProps_Props_Mesh_676": {
 "generate/lightmap_uv": 0,
@@ -949,8 +1009,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_676.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_676.res"
+"save_to_file/path": "uid://c5cmvyal7gq8w"
 },
 "BistroProps_Props_Mesh_677": {
 "generate/lightmap_uv": 0,
@@ -959,8 +1020,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_677.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_677.res"
+"save_to_file/path": "uid://cx3gvtsb4y1jj"
 },
 "BistroProps_Props_Mesh_678": {
 "generate/lightmap_uv": 0,
@@ -969,8 +1031,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_678.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_678.res"
+"save_to_file/path": "uid://d2d3ob88oritc"
 },
 "BistroProps_Props_Mesh_679": {
 "generate/lightmap_uv": 0,
@@ -979,8 +1042,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_679.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_679.res"
+"save_to_file/path": "uid://b37dq051etsmv"
 },
 "BistroProps_Props_Mesh_680": {
 "generate/lightmap_uv": 0,
@@ -989,8 +1053,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_680.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_680.res"
+"save_to_file/path": "uid://csly4d3wo464o"
 },
 "BistroProps_Props_Mesh_681": {
 "generate/lightmap_uv": 0,
@@ -999,8 +1064,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_681.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_681.res"
+"save_to_file/path": "uid://cfegj08xiw5l"
 },
 "BistroProps_Props_Mesh_682": {
 "generate/lightmap_uv": 0,
@@ -1009,8 +1075,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_682.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_682.res"
+"save_to_file/path": "uid://dorkvmmwooepm"
 },
 "BistroProps_Props_Mesh_683": {
 "generate/lightmap_uv": 0,
@@ -1019,8 +1086,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_683.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_683.res"
+"save_to_file/path": "uid://cg2qebjuixj00"
 },
 "BistroProps_Props_Mesh_684": {
 "generate/lightmap_uv": 0,
@@ -1029,8 +1097,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_684.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_684.res"
+"save_to_file/path": "uid://r7itliy7irqy"
 },
 "BistroProps_Props_Mesh_689": {
 "generate/lightmap_uv": 0,
@@ -1039,8 +1108,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_689.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_689.res"
+"save_to_file/path": "uid://c7j2q175pfnn2"
 },
 "BistroProps_Props_Mesh_706": {
 "generate/lightmap_uv": 0,
@@ -1049,8 +1119,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_706.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_706.res"
+"save_to_file/path": "uid://lmwoe76gf8r0"
 },
 "BistroProps_Props_Mesh_707": {
 "generate/lightmap_uv": 0,
@@ -1059,8 +1130,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_707.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_707.res"
+"save_to_file/path": "uid://cqw3yshdj5k10"
 },
 "BistroProps_Props_Mesh_708": {
 "generate/lightmap_uv": 0,
@@ -1069,8 +1141,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_708.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_708.res"
+"save_to_file/path": "uid://br55j0m7s001i"
 },
 "BistroProps_Props_Mesh_709": {
 "generate/lightmap_uv": 0,
@@ -1079,8 +1152,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_709.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_709.res"
+"save_to_file/path": "uid://dqs80h3n1gg5t"
 },
 "BistroProps_Props_Mesh_710": {
 "generate/lightmap_uv": 0,
@@ -1089,8 +1163,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_710.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_710.res"
+"save_to_file/path": "uid://oc0g63cccqhp"
 },
 "BistroProps_Props_Mesh_711": {
 "generate/lightmap_uv": 0,
@@ -1099,8 +1174,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_711.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_711.res"
+"save_to_file/path": "uid://djiofsdyrfuqp"
 },
 "BistroProps_Props_Mesh_712": {
 "generate/lightmap_uv": 0,
@@ -1109,8 +1185,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_712.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_712.res"
+"save_to_file/path": "uid://da353871x2og6"
 },
 "BistroProps_Props_Mesh_718": {
 "generate/lightmap_uv": 0,
@@ -1119,8 +1196,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_718.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_718.res"
+"save_to_file/path": "uid://ceysuvndp4jw3"
 },
 "BistroProps_Props_Mesh_719": {
 "generate/lightmap_uv": 0,
@@ -1129,8 +1207,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_719.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_719.res"
+"save_to_file/path": "uid://dqrxeiutk636"
 },
 "BistroProps_Props_Mesh_720": {
 "generate/lightmap_uv": 0,
@@ -1139,8 +1218,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_720.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_720.res"
+"save_to_file/path": "uid://de1u5kvis0gad"
 },
 "BistroProps_Props_Mesh_721": {
 "generate/lightmap_uv": 0,
@@ -1149,8 +1229,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_721.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_721.res"
+"save_to_file/path": "uid://dpuuefm1wrwtt"
 },
 "BistroProps_Props_Mesh_722": {
 "generate/lightmap_uv": 0,
@@ -1159,8 +1240,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_722.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_722.res"
+"save_to_file/path": "uid://bbb7vwvxjqlsv"
 },
 "BistroProps_Props_Mesh_723": {
 "generate/lightmap_uv": 0,
@@ -1169,8 +1251,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_723.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_723.res"
+"save_to_file/path": "uid://b1vhi0a0xfb8j"
 },
 "BistroProps_Props_Mesh_724": {
 "generate/lightmap_uv": 0,
@@ -1179,8 +1262,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_724.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_724.res"
+"save_to_file/path": "uid://d014cw1jb1fnp"
 },
 "BistroProps_Props_Mesh_725": {
 "generate/lightmap_uv": 0,
@@ -1189,8 +1273,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_725.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_725.res"
+"save_to_file/path": "uid://b7o71c3h6nqgr"
 },
 "BistroProps_Props_Mesh_726": {
 "generate/lightmap_uv": 0,
@@ -1199,8 +1284,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_726.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_726.res"
+"save_to_file/path": "uid://cnpkc2cjmnyf7"
 },
 "BistroProps_Props_Mesh_727": {
 "generate/lightmap_uv": 0,
@@ -1209,8 +1295,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_727.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_727.res"
+"save_to_file/path": "uid://drknyarl01cjs"
 },
 "BistroProps_Props_Mesh_728": {
 "generate/lightmap_uv": 0,
@@ -1219,8 +1306,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_728.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_728.res"
+"save_to_file/path": "uid://cda7erkvrhyrt"
 },
 "BistroProps_Props_Mesh_732": {
 "generate/lightmap_uv": 0,
@@ -1229,8 +1317,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_732.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_732.res"
+"save_to_file/path": "uid://bq26bxqo0cim8"
 },
 "BistroProps_Props_Mesh_733": {
 "generate/lightmap_uv": 0,
@@ -1239,8 +1328,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_733.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_733.res"
+"save_to_file/path": "uid://c43krs3jy41f"
 },
 "BistroProps_Props_Mesh_748": {
 "generate/lightmap_uv": 0,
@@ -1249,8 +1339,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_748.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_748.res"
+"save_to_file/path": "uid://dgyj2b17t8n50"
 },
 "BistroProps_Props_Mesh_749": {
 "generate/lightmap_uv": 0,
@@ -1259,8 +1350,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_749.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_749.res"
+"save_to_file/path": "uid://f08i4rkf75e6"
 },
 "BistroProps_Props_Mesh_750": {
 "generate/lightmap_uv": 0,
@@ -1269,8 +1361,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_750.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_750.res"
+"save_to_file/path": "uid://bfhx7yy2aj4t7"
 },
 "BistroProps_Props_Mesh_751": {
 "generate/lightmap_uv": 0,
@@ -1279,8 +1372,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_751.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_751.res"
+"save_to_file/path": "uid://cj2fgv8dvh44n"
 },
 "BistroProps_Props_Mesh_752": {
 "generate/lightmap_uv": 0,
@@ -1289,8 +1383,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_752.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_752.res"
+"save_to_file/path": "uid://dc3jld6wctl6u"
 },
 "BistroProps_Props_Mesh_753": {
 "generate/lightmap_uv": 0,
@@ -1299,8 +1394,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_753.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_753.res"
+"save_to_file/path": "uid://cbqsbtd8s4q3v"
 },
 "BistroProps_Props_Mesh_801": {
 "generate/lightmap_uv": 0,
@@ -1309,8 +1405,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_801.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_801.res"
+"save_to_file/path": "uid://bas8k6t27bbcl"
 },
 "BistroProps_Props_Mesh_810": {
 "generate/lightmap_uv": 0,
@@ -1319,8 +1416,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_810.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_810.res"
+"save_to_file/path": "uid://dheb7odsbpewi"
 },
 "BistroProps_Props_Mesh_811": {
 "generate/lightmap_uv": 0,
@@ -1329,8 +1427,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_811.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_811.res"
+"save_to_file/path": "uid://b3tthlypccvrm"
 },
 "BistroProps_Props_Mesh_812": {
 "generate/lightmap_uv": 0,
@@ -1339,8 +1438,9 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_812.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_812.res"
+"save_to_file/path": "uid://b8oepvs2iqjj8"
 },
 "BistroProps_Props_Mesh_815": {
 "generate/lightmap_uv": 0,
@@ -1349,10 +1449,12 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_815.res",
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Meshes/Section02/BistroProps_Props/BistroProps_Props_Mesh_815.res"
+"save_to_file/path": "uid://dsre5b7ko6fjp"
 }
 }
 }
 gltf/naming_version=0
 gltf/embedded_image_handling=1
+gltf/texture_map_mode=0
