@@ -3,14 +3,11 @@ class_name BenchmarkRoute
 
 ## 固定路線效能測試
 ## - 按 UI 左下角的「Run Benchmark」或鍵盤 B 開始；跑的時候再按一次會中止
-## - 相機沿固定路線以固定速度移動（總時長固定，與 FPS 無關），最後回到原點
-## - 結束後把玩家放回原點，並顯示 Avg FPS / 1% Low / 0.1% Low / 幀時間等
+## - 相機沿場景中的 Path3D（預設為 BenchmarkPath，曲線資源位於 Resources/BenchmarkCurve.tres）
+##   透過 PathFollow3D 以固定速度移動（總時長固定，與 FPS 無關）
+## - 可直接在 Godot 3D 編輯器中開啟 MainScene.tscn 選取 BenchmarkPath 編輯路徑點與控制柄
+## - 結束後把玩家放回路徑起點地面，並顯示 Avg FPS / 1% Low / 0.1% Low / 幀時間等
 ## - 每次結果會存到 user://benchmarks/（逐幀 CSV + summary.csv 彙總）
-##
-## 自訂路線（可選）：
-##   F7 = 在玩家目前位置加一個路線點（第一點就是原點）
-##   F8 = 存成 user://benchmark_route.json，之後就用這條路線
-##   F9 = 刪除自訂路線，回到內建路線
 
 @export var run_button: Button
 @export var result_panel: Control
@@ -20,38 +17,13 @@ class_name BenchmarkRoute
 @export var result_separator: Control
 
 @export_category("Route")
-@export var speed: float = 3.5            ## 公尺/秒
-@export var eye_height: float = 1.65
-@export var warmup_time: float = 1.5      ## 開跑前在原點停留的秒數（不計入統計）
-@export var look_ahead: float = 6.0       ## 相機看向路線前方幾公尺
-@export var turn_smoothing: float = 3.5   ## 轉頭平滑度，越大轉越快
-## 地面座標 (y=0)。第一點 = 原點，路線會自動接回第一點形成迴圈。
-@export var waypoints: PackedVector3Array = PackedVector3Array([
-	Vector3(-3.0, 0, 5.1),      # 原點（玩家出生點）
-	Vector3(-1.5, 0, -4.0),     # 往南走主街
-	Vector3(1.0, 0, -12.5),
-	Vector3(0.0, 0, -25.0),
-	Vector3(-1.0, 0, -39.0),
-	Vector3(-3.0, 0, -51.0),
-	Vector3(-9.0, 0, -59.0),    # 南端廣場繞一圈
-	Vector3(-3.0, 0, -63.5),
-	Vector3(3.0, 0, -59.0),
-	Vector3(2.0, 0, -48.0),     # 走回北邊
-	Vector3(0.5, 0, -32.0),
-	Vector3(1.0, 0, -18.0),
-	Vector3(-1.5, 0, -5.0),
-	Vector3(-9.0, 0, 0.5),      # 轉進西側街道
-	Vector3(-25.0, 0, 2.0),
-	Vector3(-35.0, 0, 2.0),
-	Vector3(-37.0, 0, -0.5),
-	Vector3(-25.0, 0, -0.5),    # 折返
-	Vector3(-12.0, 0, 1.5),
-	Vector3(-7.0, 0, 9.0),      # 往北邊小廣場
-	Vector3(-6.0, 0, 15.0),
-	Vector3(-3.5, 0, 10.0),     # 回原點
-])
+@export var benchmark_path: Path3D              ## 若留空會自動尋找場景中的 BenchmarkPath（或第一個 Path3D）
+@export var speed: float = 3.5                  ## 公尺/秒
+@export var warmup_time: float = 1.5            ## 開跑前在起點停留的秒數（不計入統計）
+@export var look_ahead: float = 6.0             ## 相機看向路線前方幾公尺；<= 0 時改用 PathFollow3D 本身朝向
+@export var turn_smoothing: float = 3.5         ## 轉頭平滑度，越大轉越快
+@export var keep_horizon_level: bool = true     ## true 時保持水平視角，false 時隨路徑上下俯仰
 
-const CUSTOM_ROUTE_PATH := "user://benchmark_route.json"
 const RESULT_DIR := "user://benchmarks"
 
 enum State { IDLE, WARMUP, RUNNING }
@@ -59,10 +31,11 @@ enum State { IDLE, WARMUP, RUNNING }
 var state := State.IDLE
 var player: Node3D
 var player_camera: Camera3D
+var path_follow: PathFollow3D
 var bench_camera: Camera3D
 var curve: Curve3D
 var route_length := 0.0
-var route_points: PackedVector3Array
+var _cam_rot := Quaternion.IDENTITY
 
 var frame_times_ms := PackedFloat32Array()
 var start_usec := 0
@@ -75,7 +48,6 @@ var last_report := ""
 
 var player_prev_process_mode := Node.PROCESS_MODE_INHERIT
 var player_prev_visible := true
-var recorded_points := PackedVector3Array()
 
 
 func _ready() -> void:
@@ -86,14 +58,6 @@ func _ready() -> void:
 	if close_button:
 		close_button.pressed.connect(_hide_results)
 	_hide_results()
-
-	bench_camera = Camera3D.new()
-	bench_camera.name = "BenchmarkCamera"
-	bench_camera.physics_interpolation_mode = Node.PHYSICS_INTERPOLATION_MODE_OFF
-	bench_camera.top_level = true
-	add_child(bench_camera)
-
-	_load_custom_route()
 
 
 func _find_player() -> void:
@@ -107,58 +71,57 @@ func _find_player() -> void:
 		# 後備：找第一個 CharacterBody3D
 		var found := scene.find_children("*", "CharacterBody3D", true, false)
 		if found.size() > 0:
-			player = found[0]
+			player = found[0] as Node3D
 	if player:
 		player_camera = player.get_node_or_null("CameraPivot/SpringArm/Camera") as Camera3D
 
 
 # ---------------------------------------------------------------- 路線
 
-func _active_points() -> PackedVector3Array:
-	if recorded_points.size() >= 2:
-		return recorded_points
-	return waypoints
+func _resolve_path_nodes() -> bool:
+	if not is_instance_valid(benchmark_path):
+		var scene := get_tree().current_scene
+		if scene:
+			benchmark_path = scene.get_node_or_null("BenchmarkPath") as Path3D
+			if benchmark_path == null:
+				var found := scene.find_children("*", "Path3D", true, false)
+				if found.size() > 0:
+					benchmark_path = found[0] as Path3D
 
+	if benchmark_path == null or benchmark_path.curve == null or benchmark_path.curve.point_count < 2:
+		return false
 
-func _build_curve() -> void:
-	var pts := _active_points().duplicate()
-	pts.append(pts[0])  # 接回原點
-	route_points = pts
-	curve = Curve3D.new()
-	curve.bake_interval = 0.1
-	var n := pts.size()
-	for i in n:
-		var p := pts[i] + Vector3.UP * eye_height
-		var prev := pts[i - 1] if i > 0 else pts[n - 2]  # 迴圈：起點的前一點 = 倒數第二點
-		var next := pts[i + 1] if i < n - 1 else pts[1]
-		# Catmull-Rom 轉成 Bezier 控制點，讓轉彎平滑
-		var tangent := (next - prev) / 6.0
-		curve.add_point(p, -tangent, tangent)
+	path_follow = null
+	for child in benchmark_path.get_children():
+		if child is PathFollow3D:
+			path_follow = child as PathFollow3D
+			break
+	if path_follow == null:
+		path_follow = PathFollow3D.new()
+		path_follow.name = "PathFollow3D"
+		path_follow.rotation_mode = PathFollow3D.ROTATION_Y
+		benchmark_path.add_child(path_follow)
+	path_follow.loop = false
+	path_follow.physics_interpolation_mode = Node.PHYSICS_INTERPOLATION_MODE_OFF
+
+	bench_camera = null
+	for child in path_follow.get_children():
+		if child is Camera3D:
+			bench_camera = child as Camera3D
+			break
+	if bench_camera == null:
+		bench_camera = Camera3D.new()
+		bench_camera.name = "BenchmarkCamera"
+		path_follow.add_child(bench_camera)
+	bench_camera.physics_interpolation_mode = Node.PHYSICS_INTERPOLATION_MODE_OFF
+
+	curve = benchmark_path.curve
 	route_length = curve.get_baked_length()
+	return route_length >= 1.0
 
 
-func _load_custom_route() -> void:
-	if not FileAccess.file_exists(CUSTOM_ROUTE_PATH):
-		return
-	var data = JSON.parse_string(FileAccess.get_file_as_string(CUSTOM_ROUTE_PATH))
-	if typeof(data) != TYPE_ARRAY:
-		return
-	recorded_points = PackedVector3Array()
-	for p in data:
-		if typeof(p) == TYPE_ARRAY and p.size() >= 3:
-			recorded_points.append(Vector3(p[0], p[1], p[2]))
-	print("[Benchmark] Loaded custom route with %d points" % recorded_points.size())
-
-
-func _save_custom_route() -> void:
-	var arr := []
-	for p in recorded_points:
-		arr.append([p.x, p.y, p.z])
-	var f := FileAccess.open(CUSTOM_ROUTE_PATH, FileAccess.WRITE)
-	if f:
-		f.store_string(JSON.stringify(arr))
-		f.close()
-	print("[Benchmark] Saved %d points to %s" % [recorded_points.size(), ProjectSettings.globalize_path(CUSTOM_ROUTE_PATH)])
+func _sample_global(offset: float) -> Vector3:
+	return benchmark_path.to_global(curve.sample_baked(offset))
 
 
 # ---------------------------------------------------------------- 流程
@@ -172,9 +135,8 @@ func _on_run_pressed() -> void:
 
 func start_benchmark() -> void:
 	_find_player()
-	_build_curve()
-	if route_length < 1.0:
-		push_warning("[Benchmark] Route too short")
+	if not _resolve_path_nodes():
+		push_warning("[Benchmark] Missing or invalid Path3D route")
 		return
 
 	# 停用玩家控制並隱藏模型
@@ -192,12 +154,19 @@ func start_benchmark() -> void:
 		bench_camera.attributes = player_camera.attributes
 		bench_camera.environment = player_camera.environment
 		bench_camera.cull_mask = player_camera.cull_mask
+		bench_camera.compositor = player_camera.compositor
 	else:
 		bench_camera.fov = 75.0
 
-	var start_pos := curve.sample_baked(0.0)
-	var look := curve.sample_baked(min(look_ahead, route_length))
-	bench_camera.global_transform = Transform3D(_look_basis(start_pos, look, Basis.IDENTITY), start_pos)
+	path_follow.progress = 0.0
+	bench_camera.transform = Transform3D.IDENTITY
+	if look_ahead > 0.0:
+		var start_pos := path_follow.global_position
+		var look_pos := _sample_global(minf(look_ahead, route_length))
+		_cam_rot = _look_basis(start_pos, look_pos, path_follow.global_basis).get_rotation_quaternion()
+		bench_camera.global_basis = Basis(_cam_rot)
+	else:
+		_cam_rot = bench_camera.global_basis.get_rotation_quaternion()
 	bench_camera.make_current()
 
 	frame_times_ms = PackedFloat32Array()
@@ -218,10 +187,24 @@ func stop_benchmark(aborted: bool) -> void:
 	if run_button:
 		run_button.text = "Run Benchmark"
 
-	# 玩家回到原點並恢復控制
+	if is_instance_valid(path_follow):
+		path_follow.progress = 0.0
+	if is_instance_valid(bench_camera):
+		bench_camera.transform = Transform3D.IDENTITY
+
+	# 玩家回到路徑起點地面並恢復控制
 	if player:
-		var origin := route_points[0] if route_points.size() > 0 else player.global_position
-		player.global_position = Vector3(origin.x, origin.y, origin.z)
+		var start_world := _sample_global(0.0) if (is_instance_valid(benchmark_path) and curve != null) else player.global_position
+		var origin := Vector3(start_world.x, maxf(0.0, start_world.y - 1.65), start_world.z)
+		var world_3d := player.get_world_3d()
+		if world_3d and world_3d.direct_space_state:
+			var query := PhysicsRayQueryParameters3D.create(start_world, start_world + Vector3.DOWN * 10.0)
+			if player is CollisionObject3D:
+				query.exclude = [(player as CollisionObject3D).get_rid()]
+			var hit := world_3d.direct_space_state.intersect_ray(query)
+			if not hit.is_empty():
+				origin = hit.position
+		player.global_position = origin
 		if player is CharacterBody3D:
 			(player as CharacterBody3D).velocity = Vector3.ZERO
 		player.process_mode = player_prev_process_mode
@@ -258,19 +241,22 @@ func _process(delta: float) -> void:
 	var elapsed := float(now - start_usec) / 1_000_000.0
 	var offset := elapsed * speed
 	if offset >= route_length:
-		bench_camera.global_position = curve.sample_baked(route_length)
+		path_follow.progress = route_length
 		stop_benchmark(false)
 		return
 
-	var pos := curve.sample_baked(offset)
-	var target := curve.sample_baked(min(offset + look_ahead, route_length))
-	if offset + look_ahead > route_length:
-		# 接近終點時看向路線起點方向，避免方向退化
-		target = curve.sample_baked(fmod(offset + look_ahead, route_length))
-	var desired := _look_basis(pos, target, bench_camera.global_basis)
-	var w := 1.0 - exp(-turn_smoothing * delta)
-	var q := bench_camera.global_basis.get_rotation_quaternion().slerp(desired.get_rotation_quaternion(), w)
-	bench_camera.global_transform = Transform3D(Basis(q), pos)
+	path_follow.progress = offset
+	if look_ahead > 0.0:
+		var look_offset := offset + look_ahead
+		if look_offset > route_length:
+			# 閉合路徑時看向起點前方，避免終點附近方向退化
+			look_offset = fmod(look_offset, route_length) if curve.closed else route_length
+		var pos := path_follow.global_position
+		var target := _sample_global(look_offset)
+		var desired := _look_basis(pos, target, Basis(_cam_rot))
+		var w := 1.0 - exp(-turn_smoothing * delta)
+		_cam_rot = _cam_rot.slerp(desired.get_rotation_quaternion(), w)
+		bench_camera.global_basis = Basis(_cam_rot)
 
 	# 即時顯示（每 0.25 秒更新）
 	live_fps_accum += ft_ms
@@ -284,7 +270,8 @@ func _process(delta: float) -> void:
 
 func _look_basis(from: Vector3, to: Vector3, fallback: Basis) -> Basis:
 	var dir := to - from
-	dir.y = 0.0  # 保持水平視角
+	if keep_horizon_level:
+		dir.y = 0.0
 	if dir.length() < 0.05:
 		return fallback
 	return Basis.looking_at(dir.normalized(), Vector3.UP)
@@ -408,21 +395,5 @@ func _unhandled_input(event: InputEvent) -> void:
 	var key := event as InputEventKey
 	if key == null or not key.pressed or key.echo:
 		return
-	match key.keycode:
-		KEY_B:
-			_on_run_pressed()
-		KEY_F7:
-			if state == State.IDLE:
-				_find_player()
-				if player:
-					var p := player.global_position
-					recorded_points.append(Vector3(p.x, p.y, p.z))
-					print("[Benchmark] Recorded point %d: %s" % [recorded_points.size(), p])
-		KEY_F8:
-			if recorded_points.size() >= 2:
-				_save_custom_route()
-		KEY_F9:
-			recorded_points = PackedVector3Array()
-			if FileAccess.file_exists(CUSTOM_ROUTE_PATH):
-				DirAccess.remove_absolute(ProjectSettings.globalize_path(CUSTOM_ROUTE_PATH))
-			print("[Benchmark] Custom route cleared, using built-in route")
+	if key.keycode == KEY_B:
+		_on_run_pressed()
