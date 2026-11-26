@@ -1,4 +1,4 @@
-[gd_resource type="Environment" load_steps=3 format=3 uid="uid://bevtu3gehmb2j"]
+[gd_resource type="Environment" format=3 uid="uid://bevtu3gehmb2j"]
 
 [ext_resource type="Material" uid="uid://kgrcufewquxd" path="res://Materials/SkyMaterial.tres" id="1_nc131"]
 
@@ -34,7 +34,6 @@ glow_levels/6 = 1.0
 glow_levels/7 = 1.0
 glow_intensity = 1.0
 glow_strength = 0.7
-glow_blend_mode = 1
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.0
 adjustment_saturation = 1.17

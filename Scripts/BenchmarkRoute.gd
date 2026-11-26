@@ -46,7 +46,7 @@ class_name BenchmarkRoute
 	Vector3(-37.0, 0, -0.5),
 	Vector3(-25.0, 0, -0.5),    # 折返
 	Vector3(-12.0, 0, 1.5),
-	Vector3(-7.0, 0, 9.0),      # 往北邊小廣場
+	Vector3(-7.0, 0, 15.0),      # 往北邊小廣場
 	Vector3(-6.0, 0, 15.0),
 	Vector3(-3.5, 0, 10.0),     # 回原點
 ])
